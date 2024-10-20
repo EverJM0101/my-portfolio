@@ -36,26 +36,24 @@ function Navbar(){
     };
   
     window.addEventListener('scroll', handleScrollDown);
-
+  
     return () => window.removeEventListener('scroll', handleScrollDown);
   }, []);
 
   return(
     <>
-      <header className="w-full fixed pt-4 px-20 top-0">
-        <nav className={`w-full top flex justify-between items-center px-14 transition-all duration-150 bg-white/80 backdrop-blur-sm 
+      <header className="w-full fixed pt-4 px-20 top-0 z-50">
+        <nav className={`w-full top flex justify-between items-center px-14 transition-all duration-150 bg-white/70 backdrop-blur-md   
         ${ shadowNavbar ? ' drop-shadow-xl ' : '' }
         rounded-full`}>
           <div>
-            <img src="https://i.ibb.co/935JgLJ/mi.webp" alt="logo-perfil" className="logo-perfil"/>
+            <img src="https://i.ibb.co/935JgLJ/mi.webp" alt="logo-perfil" className="logo-perfil hidden lg:block"/>
           </div>
-          <div className='flex justify-end'>
-            <ul className='flex justify-center gap-4'>
-              {itemsNavbar.map((item, index) => (
-                <Item index={index} name={item.name} icon={item.icon}></Item>
-              ))}
-            </ul>
-          </div>
+          <ul className='flex justify-center gap-1 py-2 lg:py-0'>
+            {itemsNavbar.map((item, index) => (
+              <Item key={index} name={item.name} icon={item.icon}></Item>
+            ))}
+          </ul>
           <div className='flex items-center'>
             <SwitchMode></SwitchMode>
           </div>

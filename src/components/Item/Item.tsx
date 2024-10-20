@@ -1,11 +1,12 @@
 import './Item.css';
 
-function Item(props: any){
+function Item(props: {icon: string, name: string}){
   return (
     <>
-      <li key={props.index} className='text-xl flex items-center gap-1 cursor-pointer 
-      px-2.5 py-3 rounded-2xl
-       text-black/80 transition-colors duration-75 hover:bg-slate-400/15  '>
+      <li className='text-xl flex items-center gap-1 cursor-pointer 
+      px-5 py-3 rounded-2xl
+    text-black/80 transition-all duration-75
+    hover:bg-black/5 hover:-translate-y-1'>
         <i className={props.icon}></i><span>{props.name}</span>
       </li>
     </>

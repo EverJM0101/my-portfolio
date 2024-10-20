@@ -7,8 +7,10 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <div className='mt-32 container mx-auto px-9 flex flex-col gap-6'>
+
+      <div className='container mx-auto px-9 flex flex-col gap-6'>
         <Inicio></Inicio>
+      
         <h1 className='text-3xl font-bold underline'>Hola mundo!!</h1>
         <h1 className='text-3xl font-bold underline'>Hola mundo!!</h1>
         <h1 className='text-3xl font-bold underline'>Hola mundo!!</h1>
