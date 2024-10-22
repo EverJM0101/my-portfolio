@@ -43,7 +43,7 @@ function Navbar(){
   return(
     <>
       <header className="w-full fixed pt-4 px-20 top-0 z-50">
-        <nav className={`w-full top flex justify-between items-center px-14 transition-all duration-150 bg-white/70 backdrop-blur-md   
+        <nav className={`w-full top flex justify-between items-center px-14 transition-all duration-150 bg-white/90 backdrop-blur-md   
         ${ shadowNavbar ? ' drop-shadow-xl ' : '' }
         rounded-full`}>
           <div>

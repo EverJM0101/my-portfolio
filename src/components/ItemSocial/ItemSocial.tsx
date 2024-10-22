@@ -1,54 +1,25 @@
-import styled from 'styled-components';
+import './ItemSocial.css';
 
-const Anchor = styled.a<{ bgColor: string }>`
-  display: flex;
-  padding-right: 1.8rem;
-  align-items: center;
-  transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
-  border-radius: 1.2em;
-  padding-top: 0.6em; 
-  padding-bottom: 0.6em; 
-  margin-right: 1em;
-  
-  &:hover {
-    background-color: ${({ bgColor }) => bgColor};
-    color: #fff;
-    padding: 0.6em 1.8rem 0.6em 0; 
-    margin-right: 0.8em;
-    box-shadow: 0 0 5px ${({ bgColor }) => bgColor}, 
-    0 0 10px ${({ bgColor }) => bgColor};
-    opacity: 0.5;
-  }
+function ItemSocial(props: {url: string, icon: string, name: string}) {
+  // Definir los colores personalizados asociados a cada red social
+  const colorMap: { [key: string]: string } = {
+    Facebook: 'hover:text-[#0866FF]',     // Color personalizado de Facebook
+    X: 'hover:text-[#15202B]',            // Color personalizado de X (Twitter)
+    Instagram: 'hover:text-[#C90071]',    // Color personalizado de Instagram
+    Linkedin: 'hover:text-[#0A66C2]',     // Color personalizado de Linkedin
+    Github: 'hover:text-[#1F2328]',       // Color personalizado de Github
+  };
 
-  &:hover .icon {
-    transform: translateX(0.5rem); /* 2px */
-  }
+  // Asignar la clase correspondiente al nombre de la red social o un color por defecto
+  const colorClass = colorMap[props.name] || 'text-black';
 
-  &:hover .username {
-    opacity: 1;
-    transform: translateX(0);
-    width: auto;
-  }
-`;
-
-const Icon = styled.i`
-  font-size: 1.5rem;
-`;
-
-const Username = styled.span`margin-left: 0.75rem;
-  opacity: 0;
-  width: 0;
-  overflow: hidden;
-  transform: translateX(-0.5rem); /* -2px */
-`;
-
-function ItemSocial(props: { url: string, icon: string, color: string, username: string }) {
   return (
     <>
-      <Anchor href={props.url} target='_blank' bgColor={props.color}>
-        <Icon className={'icon ' + props.icon}></Icon>
-        <Username className="username">{props.username}</Username>
-      </Anchor>
+      <a href={props.url} target='_blank' className={`group transition-all duration-100 p-0 m-0 
+        hover:-translate-y-1 hover:scale-125 pe-8 text-glow
+        ${colorClass}`}>
+        <i className={`icon text-2xl transition-transform duration-100  ${props.icon}`}></i>
+      </a>
     </>
   );
 }

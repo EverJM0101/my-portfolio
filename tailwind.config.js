@@ -32,11 +32,20 @@ export default {
         },
         scaleUp: {
           '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.5)' },
+          '50%': { transform: 'scale(1.85)' },
         },
         moveDiagonal: {
           '0%, 100%': { transform: 'translate(0, 0)' },
           '50%': { transform: 'translate(200px, -50px)' },
+        },
+        moveDiagonal2: {
+          '100%, 0%': { transform: 'translate(0, 0)' },
+          '50%': { transform: 'translate(-50px, 140px)' },
+        },
+        animateCaret: {
+          '0%': {opacity: '1'},
+          '50%': {opacity: '0'},
+          '100%': {opacity: '1'},
         }
       },
       animation: {
@@ -44,8 +53,10 @@ export default {
         slideIn: 'slideIn 0.5s ease-in-out',
         float: 'float 5s ease-in-out infinite',
         wiggle: 'wiggle 3s ease-in-out infinite',
-        scaleUp: 'scaleUp 6s ease-in-out infinite',
+        scaleUp: 'scaleUp 5s ease-in-out infinite',
         moveDiagonal: 'moveDiagonal 7s ease-in-out infinite',
+        moveDiagonal2: 'moveDiagonal2 7s ease-in-out infinite',
+        animateCaret: 'animateCaret 1s step-end infinite'
       }
     },
   },
