@@ -50,26 +50,23 @@ function Inicio(){
           <div className="animate-wiggle animate-scaleUp w-32 h-32 bg-black/40 transform rotate-45 absolute" style={{ top: '80%', left: '68%' }}></div>
         </div>
 
-        <div className='flex flex-col h-screen z-20 relative'>
+        <div className='flex flex-col h-screen z-20 relative items-center content-center'>
           {/* Sección de contenido */}
           <div className="flex flex-col lg:flex-row justify-between items-center h-screen animate-slideIn relative">
             <div className="flex flex-col gap-7 px-20">
               <div className="flex flex-col gap-5">
               <div className="relative inline-block">
-                  <h1 className="text-6xl font-bold my-5">
+                  <h1 className="text-5xl font-bold my-5">
                       Ever Jesús Montero Minaya
-                      <span className="inline-block w-1 h-12 bg-black transition-opacity duration-300 ease-in-out ml-2 animate-animateCaret "></span>
+                      <span className="inline-block w-1 h-11 bg-black transition-opacity duration-300 ease-in-out ml-2 animate-animateCaret "></span>
                   </h1>
               </div>               
               <TitlePerfil></TitlePerfil>
               </div>
               <div className="flex flex-col gap-6">
-                <p className='pe-10'>
-                  Hola a todos✌️. Soy Ever, tengo con experiencia en desarrollo Front End. Familiarizado con la
-                  creación y mantenimiento de aplicaciones web y con conocimientos de apps Android 💻. Comprometido
-                  con el aprendizaje continuo aplicando buenas prácticas de desarrollo para crear soluciones
-                  eficientes y escalables. Hábil en trabajar en equipo y en adaptarse a nuevas tecnologías y metodologías de
-                  desarrollo. 
+                <p className='pe-40'>
+                  Hola que tal✌️. Soy Ever, tengo con experiencia en desarrollo Frontend. Familiarizado con la
+                  creación de aplicaciones web y con conocimientos en desarrollo de apps Android.
                 </p>
 
                 <div className="flex items-center gap-2 mt-5 transition-all duration-75 animate-fadeIn">
@@ -83,7 +80,7 @@ function Inicio(){
                 </div>
               </div>
             </div>
-            <div className='flex items-center justify-center '>
+            <div className='flex items-center justify-center pe-20'>
               <img src="https://i.ibb.co/FxQfhgD/foto-small.jpg" alt="perfil" className='foto rounded-3xl z-30 shadow-2xl' />
             </div>
           </div>

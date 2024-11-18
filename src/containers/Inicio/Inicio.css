@@ -1,5 +1,5 @@
 .foto{
-  max-width: 400px;
+  max-width: 330px;
 }
 
 /* styles.css */
@@ -26,6 +26,13 @@
   position: relative;
   z-index: 20; /* Este div está por encima del div de parallax */
   /* Aquí puedes agregar estilos adicionales para el contenido */
+}
+
+@media (max-width: 1024px){
+  .foto{
+    display: none;
+    max-width: 0px;
+  }
 }
 
 
